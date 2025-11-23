@@ -1,0 +1,16 @@
+public class Vetor {
+    private int[] elementos;
+    private int tamanho;
+
+    public Vetor(int capacidade) {
+        this.elementos = new int[capacidade];
+        this.tamanho = 0;
+    }
+
+    public void inserir(int valor) {
+        if (tamanho < elementos.length) {
+            elementos[tamanho] = valor;
+            tamanho++;
+        }
+    }   
+} 

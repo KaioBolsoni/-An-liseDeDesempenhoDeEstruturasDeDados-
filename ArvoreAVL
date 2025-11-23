@@ -43,7 +43,7 @@ public class ArvoreAVL {
     public void inserir(int valor) {
             raiz = inserirRecursivo(raiz, valor);
         }
-        
+
         private No inserirRecursivo(No no, int valor) {
             if (no == null) return new No(valor);
             if (valor < no.valor) {
@@ -53,5 +53,11 @@ public class ArvoreAVL {
             } else {
                 return no; 
             }
+
+        atualizarAltura(no);
+        int balanceamento = getFatorBalanceamento(no);
+        if (balanceamento > 1 && valor < no.esquerda.valor) {
+            return rotacaoDireita(no);
+        }        
 
 }  

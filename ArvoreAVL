@@ -55,7 +55,7 @@ public class ArvoreAVL {
             }
 
         atualizarAltura(no);
-        
+
         int balanceamento = getFatorBalanceamento(no);
 
         if (balanceamento > 1 && valor < no.esquerda.valor) {
@@ -77,6 +77,16 @@ public class ArvoreAVL {
         }
 
         return no;
+    }
+
+    public boolean buscar(int valor) {
+        No atual = raiz;
+        while (atual != null) {
+            if (valor == atual.valor) return true;
+            if (valor < atual.valor) atual = atual.esquerda;
+            else atual = atual.direita;
+        }
+        return false;
     }
 
 }  

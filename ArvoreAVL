@@ -1,0 +1,16 @@
+public class ArvoreAVL {
+    private No raiz;
+
+    private int altura(No no) {
+        return (no == null) ? 0 : no.altura;
+    }
+
+    private int getFatorBalanceamento(No no) {
+        if (no == null) return 0;
+        return altura(no.esquerda) - altura(no.direita);
+    }
+
+    private void atualizarAltura(No no) {
+        no.altura = 1 + Math.max(altura(no.esquerda), altura(no.direita));
+    }
+}    

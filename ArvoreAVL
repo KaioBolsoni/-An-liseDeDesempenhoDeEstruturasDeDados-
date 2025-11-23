@@ -55,9 +55,28 @@ public class ArvoreAVL {
             }
 
         atualizarAltura(no);
+        
         int balanceamento = getFatorBalanceamento(no);
+
         if (balanceamento > 1 && valor < no.esquerda.valor) {
             return rotacaoDireita(no);
         }        
+    
+        if (balanceamento < -1 && valor > no.direita.valor) {
+            return rotacaoEsquerda(no);
+        }
+
+        if (balanceamento > 1 && valor > no.esquerda.valor) {
+            no.esquerda = rotacaoEsquerda(no.esquerda);
+            return rotacaoDireita(no);
+        }
+
+        if (balanceamento < -1 && valor < no.direita.valor) {
+            no.direita = rotacaoDireita(no.direita);
+            return rotacaoEsquerda(no);
+        }
+
+        return no;
+    }
 
 }  

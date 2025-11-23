@@ -10,4 +10,12 @@ public class Arvore {
             
         return node;
     }
+
+    public boolean busca(No node, int valor) {
+        if (node == null) return false;
+        if (valor == node.valor) return true;
+        
+        if (valor < node.valor) return busca(node.esquerda, valor);
+        else return busca(node.direita, valor);
+    }
 }

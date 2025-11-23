@@ -13,4 +13,18 @@ public class ArvoreAVL {
     private void atualizarAltura(No no) {
         no.altura = 1 + Math.max(altura(no.esquerda), altura(no.direita));
     }
-}    
+
+    private No rotacaoDireita(No y) {
+        No x = y.esquerda;
+        No T2 = x.direita;
+
+        x.direita = y;
+        y.esquerda = T2;
+
+        atualizarAltura(y);
+        atualizarAltura(x);
+
+        return x;
+    }
+
+}  

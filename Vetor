@@ -24,4 +24,11 @@ public class Vetor {
         }
         return -1;
     }
+
+    public int buscaSequencial(int valor) {
+        for (int i = 0; i < tamanho; i++) {
+            if (elementos[i] == valor) return i;
+        }
+        return -1;
+    }
 } 

@@ -1,4 +1,4 @@
-package src.Estruturas;
+package src.estruturas;
 public class No {
     int valor;
     No esquerda, direita;

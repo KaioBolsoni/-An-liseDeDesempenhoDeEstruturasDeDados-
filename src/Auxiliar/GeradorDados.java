@@ -1,4 +1,4 @@
-package src.Auxiliar;
+package src.auxiliar;
 import java.util.Random;
 
 public class GeradorDados {

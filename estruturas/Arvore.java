@@ -1,3 +1,5 @@
+package estruturas;
+
 public class Arvore {
     private No raiz; 
 

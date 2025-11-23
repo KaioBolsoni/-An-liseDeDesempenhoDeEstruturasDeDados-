@@ -1,3 +1,4 @@
+package src.Estruturas;
 public class No {
     int valor;
     No esquerda, direita;
